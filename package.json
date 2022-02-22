@@ -1,0 +1,12 @@
+{
+  "name": "algorithms_and_data_structures",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/vincentole/algorithms_and_data_structures.git",
+  "author": "vincentole <63076449+vincentole@users.noreply.github.com>",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^4.5.5"
+  }
+}
