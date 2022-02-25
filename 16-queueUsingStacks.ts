@@ -95,4 +95,11 @@ namespace LinkedListNameSpace {
     myQueue.push(3);
     console.log(myQueue.peek());
     console.log(myQueue);
+
+    // 9.  Think about errors, breaking input, tests, unit tests
+    //       should work out since we are typechecking
+    // 10. Check with example, repeated code: checked
+    // 11. Efficiency and scalability:
+    //       Would be more efficient to build queue directly to have O(1)
+    //       not amortized O(1).
 }
