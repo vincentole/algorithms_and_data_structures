@@ -15,7 +15,7 @@ namespace MaxSubarrayNameSpace {
     //        init sum = 0, start loop at i=1, check item 0,i
     //        at each i start another loop at j=i+1, check i+j
     // 5.  Why is this suboptimal:
-    //        time complexity: O(n!)
+    //        time complexity: O(n^2)
     //        space complexity: O(1)
     //
     // 6.  Walk through your approach:

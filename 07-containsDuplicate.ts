@@ -9,9 +9,9 @@ namespace ContainsDuplicateNameSpace {
     // 2.  Double check inputs: inputs: number[], out bool
     // 3.  What to maximize for: time and space
     // 4.  Explain brute force/ naive method
-    //       loop 1, loop 2 at each element start at i+1, if elei = elej return true, else false
+    //       loop 1, loop 2 at each element start at i+1, if itemi = itemj return true, else false
     // 5.  Explain why not optimal:
-    //       time complexity: O(n!)
+    //       time complexity: O(n^2)
     //       space complexity: O(1)
     // 6.  Walk though your approach:
     //       breaking point, bottlenack: nested loops
