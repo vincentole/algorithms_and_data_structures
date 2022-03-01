@@ -8,13 +8,9 @@
             "type": "pwa-node",
             "request": "launch",
             "name": "Launch Program",
-            "skipFiles": [
-                "<node_internals>/**"
-            ],
-            "program": "${workspaceFolder}/build/17.binarySearchTree.js",
-            "outFiles": [
-                "${workspaceFolder}/**/*.js"
-            ]
+            "skipFiles": ["<node_internals>/**"],
+            "program": "${workspaceFolder}/build/23-BFS-DFS.js",
+            "outFiles": ["${workspaceFolder}/**/*.js"]
         }
     ]
 }
