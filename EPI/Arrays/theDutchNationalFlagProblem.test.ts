@@ -1,4 +1,4 @@
-import theDutchNationalFlagProblem from './theDutchNationalFlagProblem';
+import theDutchNationalFlagProblem from './theDutchNationalFlagProblem2';
 
 describe('Arrays', () => {
     describe('The Dutch national flag problem', () => {
