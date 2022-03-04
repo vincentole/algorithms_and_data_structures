@@ -1,17 +1,45 @@
-"use strict";
 class Stack {
     constructor() {
-        this.data = [];
+        this._data = [];
+        this.cachedMaxWithCount = [];
+    }
+    get cache() {
+        return this.cachedMaxWithCount;
+    }
+    get data() {
+        return this._data;
     }
     push(value) {
-        this.data.push({ value, max: Math.max(value, this.max()) });
+        const cacheLength = this.cachedMaxWithCount.length;
+        if (cacheLength === 0) {
+            this.cachedMaxWithCount.push({ max: value, count: 1 });
+        }
+        else if (this.max() >= value) {
+            this.cachedMaxWithCount[cacheLength - 1].count++;
+        }
+        else {
+            this.cachedMaxWithCount.push({ max: value, count: 1 });
+        }
+        this.data.push(value);
         return this;
     }
     pop() {
-        var _a;
-        return (_a = this.data.pop()) === null || _a === void 0 ? void 0 : _a.value;
+        if (this.data.length <= 0)
+            return null;
+        const cacheLength = this.cachedMaxWithCount.length;
+        const cacheItem = this.cachedMaxWithCount[cacheLength - 1];
+        if (cacheItem.count <= 1) {
+            this.cachedMaxWithCount.pop();
+        }
+        else {
+            cacheItem.count--;
+        }
+        return this.data.pop();
     }
     max() {
-        return this.data[this.data.length - 1].max;
+        if (this.data.length <= 0)
+            return null;
+        return this.cachedMaxWithCount[this.cachedMaxWithCount.length - 1].max;
     }
 }
+export default Stack;

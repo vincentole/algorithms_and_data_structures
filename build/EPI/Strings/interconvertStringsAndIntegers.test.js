@@ -1,4 +1,4 @@
-import { toString, toInteger } from './interconvertStringsAndIntegers';
+import { toString, toInteger } from './interconvertStringsAndIntegers2';
 describe('Strings', () => {
     describe('Interconvert strings and integers', () => {
         it('converts strings to integers', () => {

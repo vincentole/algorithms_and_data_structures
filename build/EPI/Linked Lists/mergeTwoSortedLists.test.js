@@ -1,4 +1,4 @@
-import { LinkedList, mergeTwoSortedLists } from './mergeTwoSortedLists';
+import { LinkedList, mergeTwoSortedLists } from './mergeTwoSortedLists2';
 describe('Linked Lists', () => {
     describe('Merge two sorted lists', () => {
         let list1 = new LinkedList();
@@ -37,7 +37,6 @@ describe('Linked Lists', () => {
             list2 = new LinkedList();
             const result = [...list1.toArray(), ...list2.toArray()].sort((a, b) => a - b);
             const attempt = mergeTwoSortedLists(list1, list2).toArray();
-            console.log(attempt);
             expect(attempt).toEqual(result);
         });
         it('merges empty list with list', () => {
@@ -48,7 +47,6 @@ describe('Linked Lists', () => {
             list2.append(4);
             const result = [...list1.toArray(), ...list2.toArray()].sort((a, b) => a - b);
             const attempt = mergeTwoSortedLists(list1, list2).toArray();
-            console.log(attempt);
             expect(attempt).toEqual(result);
         });
     });
