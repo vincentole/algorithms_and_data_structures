@@ -32,9 +32,9 @@ longest_common_prefix_test :: proc(t: ^testing.T) {
 
 	for _, i in inputs {
 		output := longest_common_prefix(inputs[i], context.temp_allocator)
-		testing.expect_value(t, output, outputs[i])
+		defer free_all(context.temp_allocator)
 
-		free_all(context.temp_allocator)
+		testing.expect_value(t, output, outputs[i])
 	}
 
 }

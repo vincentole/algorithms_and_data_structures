@@ -4,13 +4,14 @@ import "core:fmt"
 import "core:log"
 import "core:testing"
 
-Count :: int
 is_anagram :: proc(s: string, t: string) -> bool {
+	count :: int
+
 	if len(s) == 0 || len(s) != len(t) {
 		return false
 	}
 
-	m := make(map[rune]Count)
+	m := make(map[rune]count)
 	defer delete(m)
 
 	for char in s {
