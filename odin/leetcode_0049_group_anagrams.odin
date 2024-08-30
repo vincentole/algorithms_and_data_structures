@@ -6,14 +6,14 @@ import "core:strings"
 import "core:testing"
 
 group_anagrams :: proc(strs: []string, allocator := context.allocator) -> [][]string {
-	count :: int
+	Count :: int
 
-	m := make(map[[26]count][dynamic]string)
+	m := make(map[[26]Count][dynamic]string)
 	defer delete(m)
 
 	for str in strs {
 
-		counts := [26]count{}
+		counts := [26]Count{}
 
 		for rune in str {
 			counts[rune - 'a'] += 1
