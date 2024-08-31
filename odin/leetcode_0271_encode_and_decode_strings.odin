@@ -12,7 +12,8 @@ encode :: proc(strs: []string) -> string {
 	output := ""
 
 	for str in strs {
-		output = strings.concatenate([]string{output, fmt.aprintf("%v", len(str)), "#", str})
+		len := fmt.aprintf("%v", len(str))
+		output = strings.concatenate([]string{output, len, "#", str})
 	}
 
 	return output
