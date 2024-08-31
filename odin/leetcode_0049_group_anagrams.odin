@@ -6,8 +6,6 @@ import "core:strings"
 import "core:testing"
 
 group_anagrams :: proc(strs: []string, allocator := context.allocator) -> [][]string {
-	Count :: int
-
 	m := make(map[[26]Count][dynamic]string)
 	defer delete(m)
 

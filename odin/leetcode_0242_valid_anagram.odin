@@ -5,13 +5,12 @@ import "core:log"
 import "core:testing"
 
 is_anagram :: proc(s: string, t: string) -> bool {
-	count :: int
-
+	
 	if len(s) == 0 || len(s) != len(t) {
 		return false
 	}
 
-	m := make(map[rune]count)
+	m := make(map[rune]Count)
 	defer delete(m)
 
 	for char in s {
